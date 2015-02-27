@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="?android:attr/listPreferredItemHeight" >
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="@dimen/listitem_image_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        tools:src="@drawable/pokemon_1"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/ivThumbnail"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            tools:text="Pikachu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?textAppearanceListItem" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            tools:text="#123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?textAppearanceListItemSmall" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listitem_divider_height"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

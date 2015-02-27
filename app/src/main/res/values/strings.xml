@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Groovy Pokemons</string>
+    <string name="title_activity_main">Android Groovy example</string>
+
+    <string name="error_loading_data">Error loading data.</string>
+    <string name="error_connectivity">Please check that you\'re connected to internet</string>
+
+    <string name="api_server">http://pokeapi.co/api/v1</string>
+    <string name="sprite_server">http://pokeapi.co</string>
+
+    <!-- Hardcoded pokemon names -->
+    <string-array name="pokemons">
+        <item>Bulbasaur</item>
+        <item>Ivysaur</item>
+        <item>Venusaur</item>
+        <item>Charmander</item>
+        <item>Charmeleon</item>
+        <item>Charizzard</item>
+        <item>Squirtle</item>
+        <item>Wartortle</item>
+        <item>Blastoise</item>
+    </string-array>
+
+</resources>
