@@ -1,11 +1,11 @@
 package co.infinum.groovypokemons.mvp.prestenter;
 
-import co.infinum.groovypokemons.model.Item;
+import co.infinum.groovypokemons.models.Item;
 
 /**
  * Created by ivan on 13/06/14.
  */
-public interface MainPresenter {
+interface MainPresenter {
 
     public void init();
 

@@ -8,7 +8,7 @@ import android.widget.GridView
 import android.widget.ProgressBar
 import co.infinum.groovypokemons.R
 import co.infinum.groovypokemons.adapters.ItemAdapter
-import co.infinum.groovypokemons.model.Item
+import co.infinum.groovypokemons.models.Item
 import co.infinum.groovypokemons.mvp.prestenter.MainPresenter
 import co.infinum.groovypokemons.mvp.prestenter.impl.MainPresenterImpl
 import co.infinum.groovypokemons.mvp.view.MainView

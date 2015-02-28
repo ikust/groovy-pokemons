@@ -1,4 +1,4 @@
-package co.infinum.groovypokemons.model;
+package co.infinum.groovypokemons.models;
 
 import android.widget.ImageView;
 

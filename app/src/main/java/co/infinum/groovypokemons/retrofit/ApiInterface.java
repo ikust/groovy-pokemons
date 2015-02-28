@@ -1,6 +1,6 @@
 package co.infinum.groovypokemons.retrofit;
 
-import co.infinum.groovypokemons.model.impl.PokemonRemoteItem;
+import co.infinum.groovypokemons.models.impl.PokemonRemoteItem;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;

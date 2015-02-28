@@ -1,35 +1,35 @@
 package co.infinum.groovypokemons.mvp.prestenter.impl
-import co.infinum.groovypokemons.model.Item
+
+import co.infinum.groovypokemons.models.Item
 import co.infinum.groovypokemons.mvp.interactor.MainInteractor
-import co.infinum.groovypokemons.mvp.interactor.impl.RemoteMainInteractor
 import co.infinum.groovypokemons.mvp.listener.ItemLoadListener
 import co.infinum.groovypokemons.mvp.prestenter.MainPresenter
 import co.infinum.groovypokemons.mvp.view.MainView
+
 /**
  * Created by ivan on 13/06/14.
  */
-public class MainPresenterImpl implements MainPresenter {
+class MainPresenterImpl implements MainPresenter {
 
-    private MainView mainView;
+    def MainView view;
 
-    private MainInteractor mainInteractor = new RemoteMainInteractor(   );
+    def MainInteractor interactor;
 
-    @Override public void init() {
-        mainView.showLoadingLayout();
-        mainInteractor.loadItems([
+    def void init() {
+        view.showLoadingLayout();
+        interactor.loadItems([
                 success: { items ->
-                    mainView.hideLoadingLayout();
-                    mainView.showItems(items);
+                    view.hideLoadingLayout();
+                    view.showItems(items);
                 },
-
                 fail: { error ->
 
                 }
-        ] as ItemLoadListener);
+        ] as ItemLoadListener)
     }
 
-    @Override public void onItemClick(Item item) {
-        mainView.showDialog(item);
+    def void onItemClick(Item item) {
+        view.showDialog(item);
     }
 
 }

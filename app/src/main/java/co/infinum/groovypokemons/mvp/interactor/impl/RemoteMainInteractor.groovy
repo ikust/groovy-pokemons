@@ -2,7 +2,7 @@ package co.infinum.groovypokemons.mvp.interactor.impl
 import android.util.Log
 import co.infinum.groovypokemons.MvpApplication
 import co.infinum.groovypokemons.R
-import co.infinum.groovypokemons.model.impl.PokemonRemoteItem
+import co.infinum.groovypokemons.models.impl.PokemonRemoteItem
 import co.infinum.groovypokemons.mvp.interactor.MainInteractor
 import co.infinum.groovypokemons.mvp.listener.ItemLoadListener
 import co.infinum.groovypokemons.retrofit.ApiInterface
@@ -23,7 +23,8 @@ class RemoteMainInteractor implements MainInteractor {
 
     def callback
 
-    @Override public void loadItems(ItemLoadListener listener) {
+    @Override
+    def void loadItems(ItemLoadListener listener) {
         String endpoint = MvpApplication.getInstance().getString(R.string.api_server);
 
         RestAdapter restAdapter = new RestAdapter.Builder()

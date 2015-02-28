@@ -8,22 +8,23 @@ import android.widget.ListView
 import android.widget.ProgressBar
 import co.infinum.groovypokemons.R
 import co.infinum.groovypokemons.adapters.ItemAdapter
-import co.infinum.groovypokemons.model.Item
+import co.infinum.groovypokemons.models.Item
+import co.infinum.groovypokemons.mvp.interactor.impl.AssetsMainInteractor
 import co.infinum.groovypokemons.mvp.prestenter.MainPresenter
 import co.infinum.groovypokemons.mvp.prestenter.impl.MainPresenterImpl
 import co.infinum.groovypokemons.mvp.view.MainView
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.InjectView
 
-public class ListMainActivity extends Activity implements MainView {
+class ListMainActivity extends Activity implements MainView {
 
     @InjectView(R.id.rootView) ViewGroup rootView;
     @InjectView(R.id.listView) ListView listView;
     @InjectView(R.id.progressBar) ProgressBar progressBar;
-    private ItemAdapter adapter;
 
-    private MainPresenter mainPresenter;
+    def ItemAdapter adapter;
 
+    def MainPresenter mainPresenter = new MainPresenterImpl(view: this, interactor: new AssetsMainInteractor());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,9 @@ public class ListMainActivity extends Activity implements MainView {
         SwissKnife.inject(this);
         SwissKnife.restoreState(this, savedInstanceState);
 
-        adapter = new ItemAdapter(this, R.layout.listitem, new ArrayList<Item>());
+        adapter = new ItemAdapter(this, R.layout.listitem, new ArrayList<Item>())
         listView.setAdapter(adapter);
 
-        mainPresenter = new MainPresenterImpl(mainView: this);
         mainPresenter.init();
     }
 
@@ -61,6 +61,5 @@ public class ListMainActivity extends Activity implements MainView {
 
         builder.show();
     }
-
 
 }

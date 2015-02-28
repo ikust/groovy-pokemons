@@ -1,8 +1,6 @@
-package co.infinum.groovypokemons.mvp.listener;
+package co.infinum.groovypokemons.mvp.listener
 
-import java.util.ArrayList;
-
-import co.infinum.groovypokemons.model.Item;
+import co.infinum.groovypokemons.models.Item;
 
 /**
  * Created by ivan on 13/06/14.

@@ -1,7 +1,7 @@
-package co.infinum.groovypokemons.model.impl
+package co.infinum.groovypokemons.models.impl
 import android.widget.ImageView
 import co.infinum.groovypokemons.R
-import co.infinum.groovypokemons.model.Item
+import co.infinum.groovypokemons.models.Item
 import com.google.gson.annotations.SerializedName
 import com.squareup.picasso.Picasso
 /**
